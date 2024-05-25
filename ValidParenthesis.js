@@ -22,7 +22,7 @@
 
 //test constraints
 const validBrackets= ['(', '[', '{', '}', ']', ')']
-const parenthesis= {
+const parenthesisDictionary= {
     '(': ')',
     '[': ']',
     '{': '}',
@@ -62,23 +62,23 @@ function validateParenthesis(value) {
         let isValidClosingBracket=false;
         //validate isAdjacentPair i.e, current char is an opening bracket
         //and next char is its closing bracket, but we should also do the same for vice versa
-        if(openingBrackets.includes(currentChar) && nextChar === parenthesis[currentChar] ){
+        if(openingBrackets.includes(currentChar) && nextChar === parenthesisDictionary[currentChar] ){
             isAdjacentPair= true;
         }
 
-        if(closingBrackets.includes(currentChar) && previousChar=== parenthesis[currentChar]){
+        if(closingBrackets.includes(currentChar) && previousChar=== parenthesisDictionary[currentChar]){
             isAdjacentPair=true
         }
 
         //validate isValidOpeningBracket i.e, current char's an opening bracket i steps away from
         //the beginning and at i steps away from the end, lies its closing bracket & vice versa
-        if(openingBrackets.includes(currentChar) && oppositeChar=== parenthesis[currentChar]){
+        if(openingBrackets.includes(currentChar) && oppositeChar=== parenthesisDictionary[currentChar]){
             isValidOpeningBracket= true;
         }
 
         //validate isValidClosingBracket i.e, current char's a closing bracket i steps away from
         //the beginning and at i steps away from the end, lies its opening bracket, and vice versa
-        if(closingBrackets.includes(currentChar) && currentChar === parenthesis[oppositeChar]){
+        if(closingBrackets.includes(currentChar) && currentChar === parenthesisDictionary[oppositeChar]){
             isValidClosingBracket= true;
         }
 
