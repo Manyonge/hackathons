@@ -9,11 +9,11 @@
 // const testStrings = [ "()", //true - valid "()[]{}", //true - valid "(]", //false - invalid "([)]", //false - invalid "{[]}", //true - valid "([{{{}}}])", //true - valid "({[{({{{{{{{{{{{}}}}}}}}}}})}]})", //true - valid ];
 
 // SOLUTION
-//another implied constraint is that the strings length must be divisible by 2
+//another implied constraint is that the string's length must be divisible by 2
 //as it contains pairs of brackets if valid
 //conditions that make each character be a valid one:
 // 1.it meets both set constraints
-// 2.the next character is the current character's closing parenthesis
+// 2.the next character is the current character's closing parenthesis and vice versa
 // 3.the current character is an opening bracket and is the same number of positions from the start of the string
 //   as its closing bracket on the opposite end of the string
 // 4.the current character is a closing bracket and is the same number of positions from the
